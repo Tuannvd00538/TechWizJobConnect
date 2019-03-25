@@ -66,3 +66,7 @@ app.controller('FormSignUp', function ($scope, $http, $document, $sce, $location
         // });
     }
 });
+
+app.controller('HomeController', function ($scope, $http, $document, $sce, $location, $rootScope, $timeout) {
+
+});
