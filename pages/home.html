@@ -1,26 +1,397 @@
-<div ng-controller="HomeController" class="home">
-    <div id="search-widget-wrapper" class="relative">
-        <div class="carousel slide hero-carousel hero-carousel_loaded" data-ride="carousel" id="carouselExampleIndicators">
+<div ng-controller="JobbController">
+    <!-- Banner start -->
+    <div class="banner bg-color-full" id="banner">
+        <div id="bannerCarousole" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="https://images.vietnamworks.com/logo/2560x1200-2_105473.jpg" class="d-block w-100" />
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100"
-                        src="https://images.vietnamworks.com/logo/Banner-Vinhomes-CBN_Vietnamworks-01.03.19_102449.jpg" />
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="https://images.vietnamworks.com/logo/1_105728.jpg" />
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="https://images.vietnamworks.com/logo/1_106219.jpg" />
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="https://images.vietnamworks.com/logo/Yuanta_101543.jpg" />
+                <div class="carousel-item banner-max-height active">
+                    <img class="d-block w-100 h-100" src="img/banner/banner-2.jpg" alt="banner"/>
+                    <div class="carousel-caption banner-slider-inner d-flex text-center"></div>
                 </div>
             </div>
         </div>
-        
-        <!-- form search here -->
+        <div class="banner-inner">
+            <div class="container">
+                <div class="text-center">
+                    <h3 class="b-text">JOB Connect</h3>
+                    <p>Tìm Công Việc Mơ Ước. <strong style="color: #fff; font-weight:bold;">Nâng Bước Thành
+                            Công!</strong>
+                    </p>
+                    <div class="inline-search-area ml-auto mr-auto none-768">
+                        <div class="search-boxs">
+                            <div class="search-col">
+                                <input type="text" name="search" class="form-control has-icon b-radius"
+                                    placeholder="Nhập chức danh, từ khóa hoặc tên công ty"/>
+                            </div>
+                            <div class="search-col">
+                                <select class="selectpicker search-fields" name="location">
+                                    <option>Tất cả địa điểm</option>
+                                    <option>Hà Nội</option>
+                                    <option>Hồ Chí Minh</option>
+                                    <option>Huế</option>
+                                    <option>Cà Mau</option>
+                                </select>
+                            </div>
+                            <div class="find">
+                                <button class="btn button-theme btn-search btn-block b-radius">
+                                    <i class="fa fa-search"></i><strong>Tìm Việc</strong>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="banner-counter-box none-768">
+                        <div class="counter-box">
+                            <h1 class="counter">2967</h1>
+                            <p>Công việc</p>
+                        </div>
+                        <div class="counter-box">
+                            <h1 class="counter">167</h1>
+                            <p>Công ty</p>
+                        </div>
+                        <div class="counter-box">
+                            <h1 class="counter">150</h1>
+                            <p>Ứng viên</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+    <!-- Banner end -->
+
+    <!-- Popular categories strat -->
+    <div class="popular-categories content-area-7">
+        <div class="container">
+            <!-- Main title -->
+            <div class="main-title text-center">
+                <h1>Danh Sách Phổ Biến</h1>
+                <p>Danh sách các chủ đề công việc nổi bật trong thời gian qua.</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="categorie-box">
+                        <i class="flaticon-money"></i>
+                        <h5>Kế Toán &amp; Tài Chính</h5>
+                        <span>(2143)</span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="categorie-box">
+                        <i class="flaticon-mortarboard"></i>
+                        <h5>Giáo Dục &amp; Đào Tạo</h5>
+                        <span>(742)</span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="categorie-box">
+                        <i class="flaticon-shout"></i>
+                        <h5>Digital Marketing</h5>
+                        <span>(341)</span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="categorie-box">
+                        <i class="flaticon-radar"></i>
+                        <h5>Viễn Thông</h5>
+                        <span>(410)</span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="categorie-box">
+                        <i class="flaticon-sale"></i>
+                        <h5>Sales &amp; Marketing</h5>
+                        <span>(23)</span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="categorie-box">
+                        <i class="flaticon-pencil"></i>
+                        <h5>Viết &amp; Dịch</h5>
+                        <span>(43)</span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="categorie-box">
+                        <i class="flaticon-doctor"></i>
+                        <h5>Sức Khỏe</h5>
+                        <span>(35)</span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="categorie-box">
+                        <i class="flaticon-truck"></i>
+                        <h5>Vận Tải &amp; Hậu Cần</h5>
+                        <span>(7)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Popular categories end -->
+
+    <!-- Job section strat -->
+    <div class="job-section content-area-5 bg-grea">
+        <div class="container">
+            <!-- Main title -->
+            <div class="main-title text-center">
+                <h1>Việc Làm Bạn Sẽ Thích</h1>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="job-box">
+                        <div class="company-logo">
+                            <img src="img/company-logo/logo-1.png" alt="logo"/>
+                        </div>
+                        <div class="description">
+                            <div class="float-left">
+                                <h5 class="title"><a href="#!/detail">Restaurant General Manager</a></h5>
+                                <div class="candidate-listing-footer">
+                                    <ul>
+                                        <li><i class="flaticon-work"></i> Hotel</li>
+                                        <li><i class="flaticon-pin"></i> New York City</li>
+                                        <li><i class="flaticon-time"></i> Toàn thời gian</li>
+                                    </ul>
+                                    <h6>Hết hạn: Jan 31, 2019</h6>
+                                </div>
+                            </div>
+                            <div class="div-right">
+                                <a href="#" class="apply-button">Nộp Đơn</a>
+                                <a href="#"><i class="flaticon-heart favourite"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="job-box">
+                        <div class="company-logo">
+                            <img src="img/company-logo/logo-3.png" alt="logo"/>
+                        </div>
+                        <div class="description">
+                            <div class="float-left">
+                                <h5 class="title"><a href="#!/detail">Marketing Dairector</a></h5>
+                                <div class="candidate-listing-footer">
+                                    <ul>
+                                        <li><i class="flaticon-work"></i> Red</li>
+                                        <li><i class="flaticon-pin"></i> New York City</li>
+                                        <li><i class="flaticon-time"></i> Part Time</li>
+                                    </ul>
+                                    <h6>Hết hạn: Jan 31, 2019</h6>
+                                </div>
+                            </div>
+                            <div class="div-right">
+                                <a href="#" class="apply-button">Nộp Đơn</a>
+                                <a href="#"><i class="flaticon-heart favourite"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="job-box">
+                        <div class="company-logo">
+                            <img src="img/company-logo/logo-2.png" alt="logo"/>
+                        </div>
+                        <div class="description">
+                            <div class="float-left">
+                                <h5 class="title"><a href="#!/detail">Dhaka Event Support Specialist</a></h5>
+                                <div class="candidate-listing-footer">
+                                    <ul>
+                                        <li><i class="flaticon-work"></i> Xero</li>
+                                        <li><i class="flaticon-pin"></i> New York City</li>
+                                        <li><i class="flaticon-time"></i> Temporary</li>
+                                    </ul>
+                                    <h6>Hết hạn: Jan 31, 2019</h6>
+                                </div>
+                            </div>
+                            <div class="div-right">
+                                <a href="#" class="apply-button">Nộp Đơn</a>
+                                <a href="#"><i class="flaticon-heart favourite"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="job-box">
+                        <div class="company-logo">
+                            <img src="img/company-logo/logo-4.png" alt="logo"/>
+                        </div>
+                        <div class="description">
+                            <div class="float-left">
+                                <h5 class="title"><a href="#!/detail">Green Development Marketer</a></h5>
+                                <div class="candidate-listing-footer">
+                                    <ul>
+                                        <li><i class="flaticon-work"></i> Zooms</li>
+                                        <li><i class="flaticon-pin"></i> New York City</li>
+                                        <li><i class="flaticon-time"></i> Toàn thời gian</li>
+                                    </ul>
+                                    <h6>Hết hạn: Jan 31, 2019</h6>
+                                </div>
+                            </div>
+                            <div class="div-right">
+                                <a href="#" class="apply-button">Nộp Đơn</a>
+                                <a href="#"><i class="flaticon-heart favourite"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="job-box mb-30">
+                        <div class="company-logo">
+                            <img src="img/company-logo/logo-5.png" alt="logo"/>
+                        </div>
+                        <div class="description">
+                            <div class="float-left">
+                                <h5 class="title"><a href="#!/detail">Application Developer For Mobile</a></h5>
+                                <div class="candidate-listing-footer">
+                                    <ul>
+                                        <li><i class="flaticon-work"></i> Hexagon</li>
+                                        <li><i class="flaticon-pin"></i> New York City</li>
+                                        <li><i class="flaticon-time"></i> Part Time</li>
+                                    </ul>
+                                    <h6>Hết hạn: Jan 31, 2019</h6>
+                                </div>
+                            </div>
+                            <div class="div-right">
+                                <a href="#" class="apply-button">Nộp Đơn</a>
+                                <a href="#"><i class="flaticon-heart favourite"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center clearfix">
+                        <a href="job-list.html" class="browse-all">Xem toàn bộ công việc</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Job section end -->
+
+    <!-- Counters strat -->
+    <div class="counters bg-color-full-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-6">
+                    <div class="counter-box">
+                        <i class="flaticon-user"></i>
+                        <h1 class="counter">1967</h1>
+                        <p>Thành viên</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6">
+                    <div class="counter-box">
+                        <i class="flaticon-work"></i>
+                        <h1 class="counter">667</h1>
+                        <p>Công việc</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6">
+                    <div class="counter-box">
+                        <i class="flaticon-document"></i>
+                        <h1 class="counter">475</h1>
+                        <p>Hồ sơ</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6">
+                    <div class="counter-box">
+                        <i class="flaticon-factory"></i>
+                        <h1 class="counter">475</h1>
+                        <p>Công ty</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Counters end -->
+
+    <!-- Testimonial start -->
+    <div class="testimonial">
+        <div class="container">
+            <div class="main-title">
+                <h1>Khách hàng nói gì về JOBB</h1>
+            </div>
+            <div class="slick-slider-area">
+                <div class="row slick-carousel"
+                    data-slick='{"slidesToShow": 2, "responsive":[{"breakpoint": 1024,"settings":{"slidesToShow": 2}}, {"breakpoint": 768,"settings":{"slidesToShow": 1}}]}'>
+                    <div class="slick-slide-item">
+                        <div class="testimonial-inner">
+                            <div class="content-box">
+                                <p>JOBB thật tuyệt vời, tôi đã tìm thấy công việc phù hợp và mức lương hợp lý thông qua
+                                    trang tìm kiếm việc làm JOBB.</p>
+                            </div>
+                            <div class="media">
+                                <a href="javascript:void(0)">
+                                    <img src="https://graph.facebook.com/100009112376938/picture"
+                                        alt="testimonial-avatar" class="img-fluid"/>
+                                </a>
+                                <div class="media-body align-self-center">
+                                    <h5>
+                                        Ngô Văn Tuấn
+                                    </h5>
+                                    <h6>FullStack Developer</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slick-slide-item">
+                        <div class="testimonial-inner">
+                            <div class="content-box">
+                                <p>Tôi đánh giá cao sự hỗ trợ nhiệt tình của JOBB để tôi có thể tìm được công việc phù
+                                    hợp
+                                    cũng như mức lương mong muốn của mình.</p>
+                            </div>
+                            <div class="media">
+                                <a href="javascript:void(0)">
+                                    <img src="https://graph.facebook.com/100009364495572/picture"
+                                        alt="testimonial-avatar" class="img-fluid"/>
+                                </a>
+                                <div class="media-body align-self-center">
+                                    <h5>
+                                        Đỗ Văn Quyến
+                                    </h5>
+                                    <h6>Web Developer</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial end -->
+
+    <!-- Partners strat -->
+    <div class="partners content-area-15 bg-grea">
+        <div class="container">
+            <div class="main-title text-center">
+                <h1>Các Nhà Tuyển Dụng Hàng Đầu</h1>
+            </div>
+            <div class="slick-slider-area">
+                <div class="row slick-carousel"
+                    data-slick='{"slidesToShow": 5, "responsive":[{"breakpoint": 1024,"settings":{"slidesToShow": 3}}, {"breakpoint": 768,"settings":{"slidesToShow": 2}}]}'>
+                    <div class="slick-slide-item"><img src="img/brand/brand-1.png" alt="brand" class="img-fluid"/></div>
+                    <div class="slick-slide-item"><img src="img/brand/brand-2.png" alt="brand" class="img-fluid"/></div>
+                    <div class="slick-slide-item"><img src="img/brand/brand-3.png" alt="brand" class="img-fluid"/></div>
+                    <div class="slick-slide-item"><img src="img/brand/brand-4.png" alt="brand" class="img-fluid"/></div>
+                    <div class="slick-slide-item"><img src="img/brand/brand-1.png" alt="brand" class="img-fluid"/></div>
+                    <div class="slick-slide-item"><img src="img/brand/brand-2.png" alt="brand" class="img-fluid"/></div>
+                    <div class="slick-slide-item"><img src="img/brand/brand-3.png" alt="brand" class="img-fluid"/></div>
+                    <div class="slick-slide-item"><img src="img/brand/brand-4.png" alt="brand" class="img-fluid"/></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Partners end -->
+
+    <!-- Intro section -->
+    <div class="intro-section bg-color-full-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7 col-md-12 col-sm-12">
+                    <div class="intro-text">
+                        <h3>Sử dụng ứng dụng</h3>
+                        <p>Tìm kiếm việc làm chưa bao giờ dễ dàng đến thế. Bây giờ bạn có thể tìm thấy công việc phù hợp
+                            với
+                            mong muốn của bạn</p>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-12 col-sm-12">
+                    <div class="app-download-button">
+                        <a href="javascript:void(0)" class="android-app"><i class="flaticon-robot"></i>Google Play</a>
+                        <a href="javascript:void(0)" class="apple-app"><i class="flaticon-apple"></i>Apple Store</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Intro end -->
 </div>
