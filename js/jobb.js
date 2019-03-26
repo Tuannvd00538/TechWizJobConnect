@@ -11,10 +11,21 @@ app.config(function ($routeProvider) {
         .when('/contact', {
             templateUrl: 'pages/contact.html'
         })
+        .when('/alljob', {
+            templateUrl: 'pages/alljob.html'
+        })
         .otherwise({
             redirectTo: '/'
         });
 });
+
+function onLoadPage() {
+    $(".page_loader").fadeIn("fast");
+    $("#page_scroller").click();
+    setTimeout(function () {
+        $(".page_loader").fadeOut("fast");
+    }, 500);
+}
 
 // app.controller('FormSignUp', function ($scope, $http, $document, $sce, $location, $rootScope, $timeout) {
 //     $scope.userSignupData = {
@@ -72,9 +83,13 @@ app.controller('JobbController', function ($scope, $http, $document, $sce, $loca
 });
 
 app.controller('DetailController', function ($scope, $http, $document, $sce, $location, $rootScope, $timeout) {
-
+    onLoadPage();
 });
 
 app.controller('ContactController', function ($scope, $http, $document, $sce, $location, $rootScope, $timeout) {
+    onLoadPage();
+});
 
+app.controller('AllJob', function ($scope, $http, $document, $sce, $location, $rootScope, $timeout) {
+    onLoadPage();
 });
