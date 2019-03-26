@@ -14,82 +14,48 @@ app.config(function ($routeProvider) {
         .when('/alljob', {
             templateUrl: 'pages/alljob.html'
         })
+        .when('/term', {
+            templateUrl: 'pages/term.html'
+        })
         .otherwise({
             redirectTo: '/'
         });
 });
 
-function onLoadPage() {
+function onLoadPage($scope, $rootScope) {
     $(".page_loader").fadeIn("fast");
     $("#page_scroller").click();
     setTimeout(function () {
         $(".page_loader").fadeOut("fast");
     }, 500);
+    var userLogin = JSON.parse(localStorage.getItem('isLogin'));
+
+    $rootScope.isLogin = false;
+
+    if (userLogin != null) {
+        $rootScope.isLogin = true;
+        $rootScope.nameIsLogin = userLogin.user.name;
+    }
 }
 
-// app.controller('FormSignUp', function ($scope, $http, $document, $sce, $location, $rootScope, $timeout) {
-//     $scope.userSignupData = {
-//         "name": "",
-//         "email": "",
-//         "password": "",
-//         "password_confirmation": ""
-//     };
 
-//     $scope.userLoginData = {
-//         "email": "",
-//         "password": ""
-//     };
-
-//     $scope.handleSign = function () {
-//         console.log($scope.userSignupData);
-//         // $http({
-//         //     method: 'POST',
-//         //     url: 'https://youtube-api-challenger.appspot.com/members',
-//         //     data: $scope.userSignupData
-//         // })
-//         //     .then(function mySuccess(response) {
-//         //         $scope.alertSuccess = true;
-//         //         $scope.alertError = false;
-//         //         $timeout(window.location.href = 'index.html', 2000);
-//         //     },
-//         //         function myError(response) {
-//         //             $scope.alertError = true;
-//         //             $scope.alertSuccess = false;
-//         //         })
-//     };
-
-//     $scope.handleLogin = function () {
-//         console.log($scope.userLoginData);
-//         // var name = angular.element($('#name')).val();
-//         // $http({
-//         //     method : "POST",
-//         //     url : "https://youtube-api-challenger.appspot.com/authentication",
-//         //     data: JSON.stringify($scope.loginData)
-//         // }).then(function mySuccess(response) {
-//         //     localStorage.setItem("secretToken", response.data.data.attributes.secretToken);
-//         //     localStorage.setItem("name", name);
-//         //     $scope.loggedInUsername = name;
-//         //     $scope.isLoggedIn = true;
-//         //     $location.path("/");
-//         // }, function myError(response) {
-//         //     console.log(response.statusText);
-//         //     $scope.isLoggedIn = false;
-//         // });
-//     }
-// });
 
 app.controller('JobbController', function ($scope, $http, $document, $sce, $location, $rootScope, $timeout) {
-
+    onLoadPage($scope, $rootScope);
 });
 
 app.controller('DetailController', function ($scope, $http, $document, $sce, $location, $rootScope, $timeout) {
-    onLoadPage();
+    onLoadPage($scope, $rootScope);
 });
 
 app.controller('ContactController', function ($scope, $http, $document, $sce, $location, $rootScope, $timeout) {
-    onLoadPage();
+    onLoadPage($scope, $rootScope);
 });
 
 app.controller('AllJob', function ($scope, $http, $document, $sce, $location, $rootScope, $timeout) {
-    onLoadPage();
+    onLoadPage($scope, $rootScope);
+});
+
+app.controller('TermController', function ($scope, $http, $document, $sce, $location, $rootScope, $timeout) {
+    onLoadPage($scope, $rootScope);
 });

@@ -1,37 +1,3 @@
-/*------------------------------------------------------------------
-[Main Stylesheet]
-
-Project:    JOBB
-Version:    1.1.0
--------------------------------------------------------------------*/
-
-/*------------------------------------------------------------------
-[Table of contents]
-    2. Main Header / .main-header
-    3. Home Page Banner (Main Home) / .banner
-    4. Banner Search Box / .search-area
-    5. Popular Categories / .popular-categories
-    6. Job Section / .job-box
-    7. Application Counter / .counters
-    8. Testimonial / .testimonial
-    9. Partner / .partners-block
-    10. Single Page Banner / .sub-banner
-    11. Candidate Details / .candidate-section
-    12. Employer Details / .employer-details-page
-    13. Job Details / .job-details-page
-    14. Pricing Plan / .pricing-tables
-    15. Comments / .comments
-    18. Dashboard / .dashboard
-    19. Add Resume / .add-resume
-    20. Post Job / .post-job
-    20. Blog / .blog-body
-    21. Contact Form / .contact-form
-    22. Signup/Login Wrapper / .form-content-box
-    23. Pagination / .pagination
-    24. Main Footer / .main-footer
-    25. Sub Footer / .sub-footer
--------------------------------------------------------------------*/
-/** Global classes**/
 html, body {
     height: 100%;
 }
@@ -7647,4 +7613,14 @@ employer-box-2{
     height: 100vh !important;
 }
 
+.term-jobb {
+    padding-left: 50px;
+}
 
+.term-jobb li {
+    list-style: decimal;
+}
+
+.term-jobb-ol li {
+    list-style: circle;
+}

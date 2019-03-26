@@ -81,9 +81,14 @@
                     </li>
                 </ul>
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item ">
+                    <li class="nav-item" ng-hide="isLogin">
                         <a class="nav-link" href="login.html">
                             <i class="flaticon-logout"></i>Đăng Nhập
+                        </a>
+                    </li>
+                    <li class="nav-item" ng-show="isLogin">
+                        <a class="nav-link" href="javascript:void(0)">
+                            {{nameIsLogin}}
                         </a>
                     </li>
                     <li class="nav-item">
@@ -132,7 +137,7 @@
                             <a href="#!/contact">Liên Hệ</a>
                         </li>
                         <li>
-                            <a href="javascript:void(0)">Điều Khoản Sử Dụng</a>
+                            <a href="#!/term">Điều Khoản Sử Dụng</a>
                         </li>
                         <li>
                             <a href="javascript:void(0)">Quy Định Bảo Mật</a>
