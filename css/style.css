@@ -904,14 +904,6 @@ input[type=checkbox]:checked + label:before {
     -webkit-animation: bgburnsEast 25s linear infinite alternate;*/
 }
 
-.banner-min-height {
-    /*max-height: 720px;*/
-}
-
-.banner-max-height img {
-    /*max-height: 720px;*/
-}
-
 .banner .slider-mover-left {
     width: 35px;
     height: 50px;
@@ -1038,8 +1030,6 @@ input[type=checkbox]:checked + label:before {
     padding: 14px 15px 15px 15px;
 }
 
-.banner .bootstrap-select {
-}
 
 .banner .search-fields {
     border-radius: 0px;
@@ -1051,11 +1041,6 @@ input[type=checkbox]:checked + label:before {
 
 .banner_video_bg_2 {
     max-height: 550px;
-}
-
-.pattern-overlay {
-    /*background-color: rgba(0, 0, 0, 0.35);
-    height: 100vh;*/
 }
 
 .banner_video_bg .carousel-item {
@@ -1184,7 +1169,9 @@ input[type=checkbox]:checked + label:before {
 
 .show-search-area {
     z-index: 9999;
-. search-contents transition: all 0.4 s;
+}
+.search-contents {
+    transition: all 0.4 s;
     display: block;
 }
 
@@ -3641,15 +3628,10 @@ footer {
     background-position: 0 0;
 }
 
-.range-slider .ui-slider .ui-slider-handle {
-}
-
 .range-slider .ui-widget-content {
     background-color: #ccc;
 }
 
-.range-slider .ui-widget-header {
-}
 
 .range-slider .ui-slider.ui-state-disabled .ui-slider-handle, .range-slider .ui-slider.ui-state-disabled .ui-slider-range {
     filter: inherit;
@@ -4441,8 +4423,7 @@ footer {
     margin-top: 14px;
 }
 
-<!-- candidate box -->
-.job-listing-details{
+.job-listing-details {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -4527,7 +4508,6 @@ footer {
     float: left;
 }
 
-<!-- Job box -->
 .job-box{
     width: 100%;
 }
@@ -4650,7 +4630,7 @@ footer {
     margin-top: 27px;
 }
 
-<!-- job box-2 -->
+
 .job-box-2{
     width: 100%;
     display: inline-block;
@@ -4711,7 +4691,7 @@ footer {
 
 }
 
-<!-- Jb-3 -->
+
 .jb-3{
     display: inline-block;
     width: 100%;
@@ -4759,7 +4739,7 @@ footer {
     float: right;
 }
 
-<!-- Jb-4 -->
+
 .jb-4 .company-logo {
     width: 60px;
 }
@@ -4778,7 +4758,7 @@ footer {
     margin-top: 15px;
 }
 
-<!-- Employer box -->
+
 .employer-box {}
 
 .employer-box{
@@ -4997,7 +4977,7 @@ employer-box-2{
     margin-right: 5px;
 }
 
-<!-- Portfolio -->
+
 .portfolio .slick-arrow-buton {
     width: 35px;
     height: 35px;
