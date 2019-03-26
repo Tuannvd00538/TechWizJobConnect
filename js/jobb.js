@@ -38,8 +38,6 @@ function onLoadPage($scope, $rootScope) {
     }
 }
 
-
-
 app.controller('JobbController', function ($scope, $http, $document, $sce, $location, $rootScope, $timeout) {
     onLoadPage($scope, $rootScope);
 });

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="vi-VN">
+
 <head>
     <title>JOBB - Tuyển dụng, việc làm, tìm việc làm nhanh mới nhất</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,27 +19,29 @@
     <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="fonts/flaticon/font/flaticon.css">
     <link rel="stylesheet" type="text/css" href="fonts/linearicons/style.css">
-    <link rel="stylesheet" type="text/css"  href="css/jquery.mCustomScrollbar.css">
-    <link rel="stylesheet" type="text/css"  href="css/dropzone.css">
-    <link rel="stylesheet" type="text/css"  href="css/slick.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" type="text/css" href="css/dropzone.css">
+    <link rel="stylesheet" type="text/css" href="css/slick.css">
 
     <!-- Custom stylesheet -->
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" id="style_sheet" href="css/skins/midnight-blue.css">
 
     <!-- Favicon icon -->
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" >
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 
     <!-- Google fonts -->
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,300,700">
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Dosis%7CMontserrat:200,300,400,500,600,700,800,900%7CNunito+Sans:200,300,400,600,700,800,900">
+    <link rel="stylesheet" type="text/css"
+        href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,300,700">
+    <link rel="stylesheet" type="text/css"
+        href="https://fonts.googleapis.com/css?family=Dosis%7CMontserrat:200,300,400,500,600,700,800,900%7CNunito+Sans:200,300,400,600,700,800,900">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link rel="stylesheet" type="text/css" href="css/ie10-viewport-bug-workaround.css">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script  src="js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script  src="js/ie-emulation-modes-warning.js"></script>
+    <script src="js/ie-emulation-modes-warning.js"></script>
     <script src="./js/angular.min.js"></script>
     <script src="./js/angular-route.js"></script>
     <script src="./js/jobb.js"></script>
@@ -49,204 +52,220 @@
     <script  src="js/respond.min.js"></script>
     <![endif]-->
 </head>
+
 <body ng-app="JOBB">
-<div class="page_loader"></div>
+    <div class="page_loader"></div>
 
-<!-- Main header start -->
-<header class="main-header header-transparent sticky-header">
-    <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand logo" href="/">
-                <img src="img/logos/black-logo.png" alt="logo">
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav header-ml">
-                    <li class="nav-item">
-                        <a class="nav-link" href="javascript:void(0)">
-                            Tất Cả Việc Làm
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="javascript:void(0)">
-                            Công Ty
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="javascript:void(0)">
-                            Tư Vấn
-                        </a>
-                    </li>
-                </ul>
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item" ng-hide="isLogin">
-                        <a class="nav-link" href="login.html">
-                            <i class="flaticon-logout"></i>Đăng Nhập
-                        </a>
-                    </li>
-                    <li class="nav-item" ng-show="isLogin">
-                        <a class="nav-link" href="javascript:void(0)">
-                            {{nameIsLogin}}
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="employer-dashboard-post-job.html" class="nav-link link-color"><i class="flaticon-plus"></i> Đăng Tuyển Dụng</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </div>
-</header>
-<!-- Main header end -->
+    <!-- Main header start -->
+    <header class="main-header header-transparent sticky-header">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand logo" href="/">
+                    <img src="img/logos/black-logo.png" alt="logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav header-ml">
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0)">
+                                Tất Cả Việc Làm
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0)">
+                                Công Ty
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0)">
+                                Tư Vấn
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item" ng-hide="isLogin">
+                            <a class="nav-link" href="login.html">
+                                <i class="flaticon-logout"></i>Đăng Nhập
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown" ng-show="isLogin">
+                            <a class="nav-link dropdown-toggle" href="javascript:void(0)" id="navbarDropdownMenuLink10"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                {{nameIsLogin}}
+                            </a>
+                            <ul class="dropdown-menu dm-2" aria-labelledby="navbarDropdownMenuLink10">
+                                <li><a class="dropdown-item" href="javascript:void(0)">Tài khoản</a></li>
+                                <li><a class="dropdown-item" href="javascript:void(0)">Công việc đã ứng tuyển</a></li>
+                                <li><a class="dropdown-item" href="javascript:void(0)">Việc làm đã lưu</a></li>
+                                <li><a class="dropdown-item" href="javascript:void(0)">Thay đổi mật khẩu</a></li>
+                                <li><a class="dropdown-item" href="javascript:void(0)">Trợ giúp</a></li>
+                                <li class="logout"><a class="dropdown-item" href="javascript:void(0)" id="logout">Đăng xuất</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="employer-dashboard-post-job.html" class="nav-link link-color"><i
+                                    class="flaticon-plus"></i> Đăng Tuyển Dụng</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- Main header end -->
 
-<div ng-view></div>
+    <div ng-view></div>
 
-<!-- Footer start -->
-<footer class="footer">
-    <div class="container footer-inner">
-        <div class="row">
-            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
-                <div class="footer-item clearfix">
-                    <img src="img/logos/logo.png" alt="logo" class="f-logo">
-                    <ul class="contact-info">
-                        <li>
-                            <i class="flaticon-pin"></i>Số 8A, Tôn Thất Thuyết, Cầu Giấy, Hà Nội, Việt Nam
-                        </li>
-                        <li>
-                            <i class="flaticon-mail"></i><a href="javascript:void(0)">hr@jobconnect.com</a>
-                        </li>
-                        <li>
-                            <i class="flaticon-internet"></i><a href="javascript:void(0)">jobconnect.com</a>
-                        </li>
-                        <li>
-                            <i class="flaticon-phone"></i><a href="tel:+55-417-634-7071">+84 987773751</a>
-                        </li>
-                    </ul>
+    <!-- Footer start -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="row">
+                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                    <div class="footer-item clearfix">
+                        <img src="img/logos/logo.png" alt="logo" class="f-logo">
+                        <ul class="contact-info">
+                            <li>
+                                <i class="flaticon-pin"></i>Số 8A, Tôn Thất Thuyết, Cầu Giấy, Hà Nội, Việt Nam
+                            </li>
+                            <li>
+                                <i class="flaticon-mail"></i><a href="javascript:void(0)">hr@jobconnect.com</a>
+                            </li>
+                            <li>
+                                <i class="flaticon-internet"></i><a href="javascript:void(0)">jobconnect.com</a>
+                            </li>
+                            <li>
+                                <i class="flaticon-phone"></i><a href="tel:+55-417-634-7071">+84 987773751</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6">
-                <div class="footer-item">
-                    <h4>Về JOBB</h4>
-                    <ul class="links">
-                        <li>
-                            <a href="javascript:void(0)">Về JOBB</a>
-                        </li>
-                        <li>
-                            <a href="#!/contact">Liên Hệ</a>
-                        </li>
-                        <li>
-                            <a href="#!/term">Điều Khoản Sử Dụng</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0)">Quy Định Bảo Mật</a>
-                        </li>
-                    </ul>
+                <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6">
+                    <div class="footer-item">
+                        <h4>Về JOBB</h4>
+                        <ul class="links">
+                            <li>
+                                <a href="javascript:void(0)">Về JOBB</a>
+                            </li>
+                            <li>
+                                <a href="#!/contact">Liên Hệ</a>
+                            </li>
+                            <li>
+                                <a href="#!/term">Điều Khoản Sử Dụng</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">Quy Định Bảo Mật</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6">
-                <div class="footer-item">
-                    <h4>Người Tìm Việc</h4>
-                    <ul class="links">
-                        <li>
-                            <a href="javascript:void(0)">Tạo Tài Khoản</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0)">Tư Vấn Nghề Nghiệp</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0)">CV Của Tôi</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0)">Câu Hỏi Thường Gặp</a>
-                        </li>
-                    </ul>
+                <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6">
+                    <div class="footer-item">
+                        <h4>Người Tìm Việc</h4>
+                        <ul class="links">
+                            <li>
+                                <a href="javascript:void(0)">Tạo Tài Khoản</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">Tư Vấn Nghề Nghiệp</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">CV Của Tôi</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">Câu Hỏi Thường Gặp</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6">
-                <div class="footer-item">
-                    <h4>Nhà Tuyển Dụng</h4>
-                    <ul class="links">
-                        <li>
-                            <a href="javascript:void(0)">Tạo Tài Khoản</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0)">Sản Phẩm &amp; Dịch Vụ</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0)">Đăng Tìm Việc</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0)">Câu Hỏi Thường Gặp</a>
-                        </li>
-                    </ul>
+                <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6">
+                    <div class="footer-item">
+                        <h4>Nhà Tuyển Dụng</h4>
+                        <ul class="links">
+                            <li>
+                                <a href="javascript:void(0)">Tạo Tài Khoản</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">Sản Phẩm &amp; Dịch Vụ</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">Đăng Tìm Việc</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">Câu Hỏi Thường Gặp</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            <div class="col-xl-3 col-lg-3 col-md-8 col-sm-12">
-                <div class="footer-item clearfix">
-                    <h4>Nhận thông báo</h4>
-                    <div class="Subscribe-box">
-                        <p>Đăng ký nhận thông báo qua email để nhận được công việc mong muốn của bạn sớm nhất.</p>
-                        <form class="form-inline" method="GET">
-                            <input type="text" class="form-control mb-sm-0" id="inlineFormInputName3" placeholder="Email">
-                            <button type="button" class="btn"><i class="fa fa-paper-plane"></i></button>
-                        </form>
+                <div class="col-xl-3 col-lg-3 col-md-8 col-sm-12">
+                    <div class="footer-item clearfix">
+                        <h4>Nhận thông báo</h4>
+                        <div class="Subscribe-box">
+                            <p>Đăng ký nhận thông báo qua email để nhận được công việc mong muốn của bạn sớm nhất.</p>
+                            <form class="form-inline" method="GET">
+                                <input type="text" class="form-control mb-sm-0" id="inlineFormInputName3"
+                                    placeholder="Email">
+                                <button type="button" class="btn"><i class="fa fa-paper-plane"></i></button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</footer>
-<!-- Footer end -->
+    </footer>
+    <!-- Footer end -->
 
-<!-- Sub footer start -->
-<div class="sub-footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-md-8">
-                <p class="copy">Copyright &copy; Công Ty Cổ Phần <a href="javascript:void(0)">Siin Group</a> Việt Nam </p>
-            </div>
-            <div class="col-lg-4 col-md-4">
-                <ul class="social-list clearfix">
-                    <li><a href="javascript:void(0)" class="facebook"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="javascript:void(0)" class="twitter"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="javascript:void(0)" class="google"><i class="fa fa-google-plus"></i></a></li>
-                    <li><a href="javascript:void(0)" class="rss"><i class="fa fa-rss"></i></a></li>
-                    <li><a href="javascript:void(0)" class="linkedin"><i class="fa fa-linkedin"></i></a></li>
-                </ul>
+    <!-- Sub footer start -->
+    <div class="sub-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-8">
+                    <p class="copy">Copyright &copy; Công Ty Cổ Phần <a href="javascript:void(0)">Siin Group</a> Việt
+                        Nam </p>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <ul class="social-list clearfix">
+                        <li><a href="javascript:void(0)" class="facebook"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="javascript:void(0)" class="twitter"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="javascript:void(0)" class="google"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="javascript:void(0)" class="rss"><i class="fa fa-rss"></i></a></li>
+                        <li><a href="javascript:void(0)" class="linkedin"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
-</div>
-<!-- Sub footer end -->
+    <!-- Sub footer end -->
 
-<script src="js/jquery-2.2.0.min.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script  src="js/bootstrap-submenu.js"></script>
-<script  src="js/rangeslider.js"></script>
-<script  src="js/jquery.mb.YTPlayer.js"></script>
-<script  src="js/bootstrap-select.min.js"></script>
-<script  src="js/jquery.easing.1.3.js"></script>
-<script  src="js/jquery.scrollUp.js"></script>
-<script  src="js/jquery.mCustomScrollbar.concat.min.js"></script>
-<script  src="js/leaflet.js"></script>
-<script  src="js/leaflet-providers.js"></script>
-<script  src="js/leaflet.markercluster.js"></script>
-<script  src="js/moment.min.js"></script>
-<script  src="js/daterangepicker.min.js"></script>
-<script  src="js/dropzone.js"></script>
-<script  src="js/slick.min.js"></script>
-<script  src="js/jquery.filterizr.js"></script>
-<script  src="js/jquery.magnific-popup.min.js"></script>
-<script  src="js/jquery.countdown.js"></script>
-<script  src="js/maps.js"></script>
-<script  src="js/app.js"></script>
+    <script src="js/jquery-2.2.0.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-submenu.js"></script>
+    <script src="js/rangeslider.js"></script>
+    <script src="js/jquery.mb.YTPlayer.js"></script>
+    <script src="js/bootstrap-select.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.scrollUp.js"></script>
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/leaflet.js"></script>
+    <script src="js/leaflet-providers.js"></script>
+    <script src="js/leaflet.markercluster.js"></script>
+    <script src="js/moment.min.js"></script>
+    <script src="js/daterangepicker.min.js"></script>
+    <script src="js/dropzone.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/jquery.filterizr.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery.countdown.js"></script>
+    <script src="js/maps.js"></script>
+    <script src="js/app.js"></script>
 
-<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-<script  src="js/ie10-viewport-bug-workaround.js"></script>
-<!-- Custom javascript -->
-<script  src="js/ie10-viewport-bug-workaround.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+    <!-- Custom javascript -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
 </body>
+
 </html>

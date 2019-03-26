@@ -416,6 +416,7 @@ $(function () {
     $(document).on('click', '.setting-button', function () {
         $('.option-panel').toggleClass('option-panel-collased');
     });
+
 });
 
 // mCustomScrollbar initialization
@@ -433,3 +434,10 @@ $(function () {
         }
     }).trigger("resize");
 })(jQuery);
+
+$(document).ready(() => {
+    $('#logout').click(() => {
+        localStorage.removeItem('isLogin');
+        window.location.href = "/";
+    });
+});
