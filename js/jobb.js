@@ -40,10 +40,69 @@ function onLoadPage($scope, $rootScope) {
 
 app.controller('JobbController', function ($scope, $http, $document, $sce, $location, $rootScope, $timeout) {
     onLoadPage($scope, $rootScope);
+
+    $scope.dataSearchHome = {
+        location: ''
+    }
+
+    var location = JSON.parse(localStorage.getItem('location'));
+
+    if (location != null) {
+        $scope.locations = location;
+    } else {
+        $http.get("http://amz.comcobinh.com/api/v1/locations")
+            .then(function (response) {
+                localStorage.setItem('location', JSON.stringify(response.data));
+                $scope.locations = response.data;
+            });
+    }
+
+    $scope.getTimeFormat = function(time) {
+
+        var dArr = time.split('-'),
+            d = dArr[2].split(' ');
+        var strDate = dArr[1] + '/' + d[0] + '/' + dArr[0] + ' ' + d[1];
+        var datum = Date.parse(strDate);
+        return datum/1000;
+    };
+
+    $http.get("http://amz.comcobinh.com/api/v1/job?count=5")
+        .then((response) => {
+            $scope.jobs = response.data.jobs;
+        });
 });
 
-app.controller('DetailController', function ($scope, $http, $document, $sce, $location, $rootScope, $timeout) {
+app.controller('DetailController', function ($scope, $http, $window, $sce, $location, $rootScope, $timeout) {
     onLoadPage($scope, $rootScope);
+
+    var paramValue = $location.search().id;
+
+    $scope.getTimeFormat = function(time) {
+
+        var dArr = time.split('-'),
+            d = dArr[2].split(' ');
+        var strDate = dArr[1] + '/' + d[0] + '/' + dArr[0] + ' ' + d[1];
+        var datum = Date.parse(strDate);
+        return datum/1000;
+    };
+
+    if (paramValue != undefined || paramValue != null) {
+
+        $scope.keyword = "";
+
+        $http.get("http://amz.comcobinh.com/api/v1/job/" + paramValue)
+            .then((response) => {
+                $scope.jobs = response.data;
+                $scope.keyword = response.data.keyword.split(", ");
+
+                $http.get("http://amz.comcobinh.com/api/v1/job?search=" + $scope.keyword[0] + "&count=3")
+                    .then((response) => {
+                        $scope.related = response.data.jobs;
+                    });
+            });
+    } else {
+        $window.location.href = "/";
+    }
 });
 
 app.controller('ContactController', function ($scope, $http, $document, $sce, $location, $rootScope, $timeout) {

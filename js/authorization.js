@@ -1,6 +1,6 @@
 var app = angular.module("JOBB", []);
 
-app.controller('HandleAuthorization', function ($scope, $window) {
+app.controller('HandleAuthorization', function ($scope, $window, $timeout) {
 
     var userLogin = JSON.parse(localStorage.getItem('isLogin'));
 
@@ -33,10 +33,11 @@ app.controller('HandleAuthorization', function ($scope, $window) {
                     "email": $scope.SIGNUP.email,
                     "password": $scope.SIGNUP.password
                 };
+                swal("Thành công!", "Tạo tài khoản thành công, vui lòng đăng nhập!", "success");
                 $window.location.href = '/login.html';
             },
             error: function (jqXHR, textStatus, errorThrown) {
-                console.log(textStatus, errorThrown);
+                swal("Lỗi!", "Có lỗi xảy ra, vui lòng thử lại sau!", "error");
             }
         });
     };
@@ -51,7 +52,7 @@ app.controller('HandleAuthorization', function ($scope, $window) {
                 $window.location.href = '/';
             },
             error: function (jqXHR, textStatus, errorThrown) {
-                console.log(textStatus, errorThrown);
+                swal("Lỗi!", "Tài khoản hoặc mật khẩu không chính xác!", "error");
             }
         });
     }

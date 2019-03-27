@@ -23,12 +23,9 @@
                                     placeholder="Nhập chức danh, từ khóa hoặc tên công ty"/>
                             </div>
                             <div class="search-col">
-                                <select class="selectpicker search-fields" name="location">
-                                    <option>Tất cả địa điểm</option>
-                                    <option>Hà Nội</option>
-                                    <option>Hồ Chí Minh</option>
-                                    <option>Huế</option>
-                                    <option>Cà Mau</option>
+                                <select class="selectpicker search-fields" name="location" ng-model="dataSearchHome.location">
+                                    <option value="">Tất cả địa điểm</option>
+                                    <option ng-repeat="item in locations" value="{{item.id}}">{{item.title}}</option>
                                 </select>
                             </div>
                             <div class="find">
@@ -137,108 +134,20 @@
             </div>
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="job-box">
+                    <div class="job-box" ng-repeat="item in jobs">
                         <div class="company-logo">
                             <img src="img/company-logo/logo-1.png" alt="logo"/>
                         </div>
                         <div class="description">
                             <div class="float-left">
-                                <h5 class="title"><a href="#!/detail">Restaurant General Manager</a></h5>
+                                <h5 class="title"><a href="#!/detail?id={{item.id}}">{{item.title}}</a></h5>
                                 <div class="candidate-listing-footer">
                                     <ul>
-                                        <li><i class="flaticon-work"></i> Hotel</li>
-                                        <li><i class="flaticon-pin"></i> New York City</li>
+                                        <li><i class="flaticon-work"></i> {{item.keyword}}</li>
+                                        <li><i class="flaticon-pin"></i> <span ng-repeat="localtion in item.locations">{{localtion.title}}<span ng-show="!$last">, </span></span></li>
                                         <li><i class="flaticon-time"></i> Toàn thời gian</li>
                                     </ul>
-                                    <h6>Hết hạn: Jan 31, 2019</h6>
-                                </div>
-                            </div>
-                            <div class="div-right">
-                                <a href="#" class="apply-button">Nộp Đơn</a>
-                                <a href="#"><i class="flaticon-heart favourite"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="job-box">
-                        <div class="company-logo">
-                            <img src="img/company-logo/logo-3.png" alt="logo"/>
-                        </div>
-                        <div class="description">
-                            <div class="float-left">
-                                <h5 class="title"><a href="#!/detail">Marketing Dairector</a></h5>
-                                <div class="candidate-listing-footer">
-                                    <ul>
-                                        <li><i class="flaticon-work"></i> Red</li>
-                                        <li><i class="flaticon-pin"></i> New York City</li>
-                                        <li><i class="flaticon-time"></i> Part Time</li>
-                                    </ul>
-                                    <h6>Hết hạn: Jan 31, 2019</h6>
-                                </div>
-                            </div>
-                            <div class="div-right">
-                                <a href="#" class="apply-button">Nộp Đơn</a>
-                                <a href="#"><i class="flaticon-heart favourite"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="job-box">
-                        <div class="company-logo">
-                            <img src="img/company-logo/logo-2.png" alt="logo"/>
-                        </div>
-                        <div class="description">
-                            <div class="float-left">
-                                <h5 class="title"><a href="#!/detail">Dhaka Event Support Specialist</a></h5>
-                                <div class="candidate-listing-footer">
-                                    <ul>
-                                        <li><i class="flaticon-work"></i> Xero</li>
-                                        <li><i class="flaticon-pin"></i> New York City</li>
-                                        <li><i class="flaticon-time"></i> Temporary</li>
-                                    </ul>
-                                    <h6>Hết hạn: Jan 31, 2019</h6>
-                                </div>
-                            </div>
-                            <div class="div-right">
-                                <a href="#" class="apply-button">Nộp Đơn</a>
-                                <a href="#"><i class="flaticon-heart favourite"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="job-box">
-                        <div class="company-logo">
-                            <img src="img/company-logo/logo-4.png" alt="logo"/>
-                        </div>
-                        <div class="description">
-                            <div class="float-left">
-                                <h5 class="title"><a href="#!/detail">Green Development Marketer</a></h5>
-                                <div class="candidate-listing-footer">
-                                    <ul>
-                                        <li><i class="flaticon-work"></i> Zooms</li>
-                                        <li><i class="flaticon-pin"></i> New York City</li>
-                                        <li><i class="flaticon-time"></i> Toàn thời gian</li>
-                                    </ul>
-                                    <h6>Hết hạn: Jan 31, 2019</h6>
-                                </div>
-                            </div>
-                            <div class="div-right">
-                                <a href="#" class="apply-button">Nộp Đơn</a>
-                                <a href="#"><i class="flaticon-heart favourite"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="job-box mb-30">
-                        <div class="company-logo">
-                            <img src="img/company-logo/logo-5.png" alt="logo"/>
-                        </div>
-                        <div class="description">
-                            <div class="float-left">
-                                <h5 class="title"><a href="#!/detail">Application Developer For Mobile</a></h5>
-                                <div class="candidate-listing-footer">
-                                    <ul>
-                                        <li><i class="flaticon-work"></i> Hexagon</li>
-                                        <li><i class="flaticon-pin"></i> New York City</li>
-                                        <li><i class="flaticon-time"></i> Part Time</li>
-                                    </ul>
-                                    <h6>Hết hạn: Jan 31, 2019</h6>
+                                    <h6>Hết hạn: {{getTimeFormat(item.expired_date) | date:'MMM dd, yyyy'}}</h6>
                                 </div>
                             </div>
                             <div class="div-right">
